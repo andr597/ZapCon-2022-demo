@@ -2,7 +2,7 @@
 
 # Add IP address of dojo and juice shop to ip.conf
 echo "`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' juice-shop`:3000" > tools/ip.conf
-echo "`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' defectdojo`:8888" >> tools/ip.conf
+echo "`docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' defectdojo`:8080" >> tools/ip.conf
 # Run the tess
 docker-compose -f run_tests.yml up -d
 # Wait until 
