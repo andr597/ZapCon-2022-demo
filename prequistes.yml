@@ -16,8 +16,8 @@ services:
     restart: unless-stopped
     container_name: defectdojo
     ports:
-      - target: 8080
-        published: 8080
+      - target: 8888
+        published: 8888
         protocol: tcp
         mode: host
     networks:
